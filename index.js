@@ -61,7 +61,7 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 //first point answer
-/*SELECT username,email,products_table.price*order_items_table.quantity AS total_amount_spent FROM `users_table` INNER join orders_table on users_table.user_id=orders_table.user_id INNER join order_items_table on order_items_table.order_id=orders_table.order_id INNER join products_table on products_table.product_id=order_items_table.product_id;*/
+/*SELECT username,email,products_table.price*order_items_table.quantity AS total_amount_spent FROM `users_table` INNER join orders_table on users_table.user_id=orders_table.user_id INNER join order_items_table on order_items_table.order_id=orders_table.order_id INNER join products_table on products_table.product_id=order_items_table.product_id WHERE orders_table.order_date >=  CURRENT_DATE - INTERVAL 7 DAY;*/
 // for second point pls check route /calculate square
 
 // for third point pls check the route /createOrder with postman as raw json data
